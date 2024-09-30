@@ -13,8 +13,9 @@ This project provides a way to convert WebP images contained within ZIP files in
 - `README.md`: This file.
 
 ## Setup and Usage
-
-rm -rf venv
+ 
+## If you dont have converter file and pdf file where the images saved and store
+## create those two files name converter and pdf
 
 ### Step 1: Navigate to the Project Directory
 
@@ -26,10 +27,10 @@ cd /path/to/image2pdf
 ### Step 2: (Optional) Create a Virtual Environment
 
 ```sh
-python3 -m venv venv
+python3.11 -m venv venv
 
 
-### Step 3: Activate the Virtual Environment
+## Step 3: Activate the Virtual Environment
 
 ```sh
 source venv/bin/activate
@@ -38,6 +39,21 @@ source venv/bin/activate
 
 ```sh
 pip install pillow
+
+###Step 4-1: If you can not install pip(for macOS)
+```bash
+ls /Applications/
+
+###check if the python version is same as virtual envirionment
+### Then remove the virtual environment and recreate 
+
+###Step 4-2: Remove current environment and create new one
+```bash
+rm -rf venv
+python3.11 -m venv venv
+source venv/bin/activate
+
+###Step 4-3 Try Step4 again
 
 ### Step 5: Place ZIP Files in the converter Directory
 Ensure that the ZIP files containing the WebP images are placed in the converter directory. Each ZIP file should contain the WebP images you want to convert to PDF.
@@ -48,4 +64,6 @@ Ensure that the ZIP files containing the WebP images are placed in the converter
 python main.py
 
 ### Disactivate virtual envirionment
+
+rm -rf venv
 source deactivate
